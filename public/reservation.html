@@ -36,9 +36,9 @@
             <li><a href="about.html">About</a></li>
             <li><a href="rooms.html">Our Rooms</a></li>
             <li class="hidden-xs probootstrap-logo-center"><a href="index.html"><img src="img/logo_md.png" class="hires" width="181" height="50" alt="Free Bootstrap Template by uicookies.com"></a></li>
-            <li><a href="reservation.html">Reservation</a></li>
+            <li class="active"><a href="reservation.html">Reservation</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li class="active"><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
           <div class="extra-text visible-xs">
             <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -63,7 +63,7 @@
               <div class="col-md-10 col-md-offset-1">
                 <div class="probootstrap-slider-text text-center">
                   <p><img src="img/curve_white.svg" class="seperator probootstrap-animate" alt="Free HTML5 Bootstrap Template"></p>
-                  <h1 class="probootstrap-heading probootstrap-animate">Contact</h1>
+                  <h1 class="probootstrap-heading probootstrap-animate">Book A Room</h1>
                   <div class="probootstrap-animate probootstrap-sub-wrap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div>
                 </div>
               </div>
@@ -75,9 +75,9 @@
   
   <section class="probootstrap-section">
     <div class="container">
-      <div class="row probootstrap-gutter60">
+      <div class="row probootstrap-gutter40">
         <div class="col-md-8">
-          <h2 class="mt0">Contact Form</h2>
+          <h2 class="mt0">Reservation Form</h2>
           <form action="#" method="post" class="probootstrap-form">
             <div class="row">
               <div class="col-md-6">
@@ -95,29 +95,84 @@
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email">
+              <div class="form-field">
+                <i class="icon icon-mail"></i>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
             </div>
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject">
+              <label for="room">Room</label>
+              <div class="form-field">
+                <i class="icon icon-chevron-down"></i>
+                <select name="room" id="room" class="form-control">
+                  <option value="">Select a Room</option>
+                  <option value="1">Classic Room</option>
+                  <option value="2">Ultra Superior Room</option>
+                  <option value="3">Grand Deluxe Room</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="date-arrival">Arrival</label>
+                  <div class="form-field">
+                    <i class="icon icon-calendar2"></i>
+                    <input type="text" class="form-control" id="date-arrival" name="date-arrival">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="date-departure">Departure</label>
+                  <div class="form-field">
+                    <i class="icon icon-calendar2"></i>
+                    <input type="text" class="form-control" id="date-departure" name="date-departure">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb30">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="adults">Adults</label>
+                  <div class="form-field">
+                    <i class="icon icon-chevron-down"></i>
+                    <select name="adults" id="adults" class="form-control">
+                      <option value="">Number of Adults</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="children">Children</label>
+                  <div class="form-field">
+                    <i class="icon icon-chevron-down"></i>
+                    <select name="children" id="children" class="form-control">
+                      <option value="">Number of Children</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4+</option>
+                    </select>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Send Message">
+              <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Reserve">
             </div>
           </form>
         </div>
         <div class="col-md-4">
-          <h2 class="mt0">Get In Touch</h2>
-          <ul class="probootstrap-contact-info">
-            <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-            <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-            <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
-          </ul>
-          <h2>Feedback</h2>
+          <h2 class="mt0">Feedback</h2>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
           <p><a href="#" class="btn btn-primary" role="button">Send Message</a></p>
         </div>
@@ -221,9 +276,6 @@
   </footer>
   <!-- END: footer -->
   
- 
-  
-
   <script src="js/scripts.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/custom.js"></script>
