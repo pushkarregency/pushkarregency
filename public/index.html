@@ -24,20 +24,33 @@
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/8.0.1/firebase-app.js"></script>
   <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/8.0.1/firebase-auth.js"></script>
-  <script defer src="/__/firebase/8.0.1/firebase-database.js"></script>
-  <script defer src="/__/firebase/8.0.1/firebase-firestore.js"></script>
-  <script defer src="/__/firebase/8.0.1/firebase-functions.js"></script>
-  <script defer src="/__/firebase/8.0.1/firebase-messaging.js"></script>
-  <script defer src="/__/firebase/8.0.1/firebase-storage.js"></script>
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-firestore.js"></script> -->
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-functions.js"></script> -->
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-storage.js"></script> -->
   <script defer src="/__/firebase/8.0.1/firebase-analytics.js"></script>
-  <script defer src="/__/firebase/8.0.1/firebase-remote-config.js"></script>
+  <!-- <script defer src="/__/firebase/8.0.1/firebase-remote-config.js"></script> -->
   <script defer src="/__/firebase/8.0.1/firebase-performance.js"></script>
   <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <script>
+    function changeImage(value) {
+      document.getElementById("nearbyplace").style = "background-image: url(img/near_"+value+".jpg);";
+    }
+  </script>
+
+  <style>
+    .nearbyplace {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
@@ -58,7 +71,7 @@
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="rooms.html">Our Rooms</a></li>
-          <li class="hidden-xs probootstrap-logo-center"><a href="index.html"><img src="img/logo_md.png" class="hires"
+          <li class="hidden-xs probootstrap-logo-center"><a href="index.html"><img src="img/logo.png" class="hires"
                 width="181" height="50" alt="Free Bootstrap Template by uicookies.com"></a></li>
           <li><a href="reservation.html">Reservation</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -119,7 +132,7 @@
       <div class="row">
         <div class="col-md-12">
           <h2 class="probootstrap-cta-heading">Reserve a room for your family and friends</span></h2>
-          <div class="probootstrap-cta-button-wrap"><a href="#" class="btn btn-primary">Call now</a></div>
+          <div class="probootstrap-cta-button-wrap"><a href="tel:+919816574040" class="btn btn-primary">Call now</a></div>
         </div>
       </div>
     </div>
@@ -130,7 +143,8 @@
       <div class="row mb30">
         <div class="col-md-8 col-md-offset-2 probootstrap-section-heading text-center">
           <h2>Explore our Services</h2>
-          <p class="lead">We sincerely hope that all is well with you and your family. We offer luxury services, well-sanitized deluxe rooms, and amazing views for you in Manali.</p>
+          <p class="lead">We sincerely hope that all is well with you and your family. We offer luxury services,
+            well-sanitized deluxe rooms, and amazing views for you in Manali.</p>
           <p><img src="img/curve.svg" class="svg" alt="Free HTML5 Bootstrap Template"></p>
         </div>
       </div>
@@ -143,7 +157,8 @@
             </div>
             <div class="text">
               <h3>Rooms</h3>
-              <p>Wooden interior theme with uniquely done furniture gives you the actual feel of the traditional houses of Manali.</p>
+              <p>Wooden interior theme with uniquely done furniture gives you the actual feel of the traditional houses
+                of Manali.</p>
               <!-- <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p> -->
             </div>
           </div>
@@ -157,7 +172,6 @@
             <div class="text">
               <h3>Food, Drinks, &amp; Music</h3>
               <p>Peaceful food service at our well-furnished restaurant with a push of traditional music.</p>
-              <!-- <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p> -->
             </div>
           </div>
         </div>
@@ -170,7 +184,6 @@
             <div class="text">
               <h3>Airport Taxi</h3>
               <p>Just 45 km away from Kullu domestic airport. Taxi available as per request.</p>
-              <!-- <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p> -->
             </div>
           </div>
         </div>
@@ -190,12 +203,13 @@
         <div class="col-md-4">
           <div class="probootstrap-block-image-text">
             <figure>
-              <a href="img/img_1.jpeg" class="image-popup">
-                <img src="img/img_1.jpeg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive">
+              <a href="img/grand_delux_room.jpg" class="image-popup">
+                <img src="img/grand_delux_room.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com"
+                  class="img-responsive">
               </a>
-              <div class="actions">
+              <!-- <div class="actions">
                 <a href="https://vimeo.com/45830194" class="popup-vimeo"><i class="icon-play2"></i></a>
-              </div>
+              </div> -->
             </figure>
             <div class="text">
               <h3><a href="#">Grand Deluxe Room</a></h3>
@@ -212,19 +226,20 @@
                 <li>32 inch LED TV in all rooms.</li>
                 <li>24 hour running hot and cold water</li>
               </ul>
-              <p><a href="#" class="btn btn-primary">Book now from ₹2500</a></p>
+              <p><a href="tel:+919816574040" class="btn btn-primary">Book now from ₹2500</a></p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="probootstrap-block-image-text">
             <figure>
-              <a href="img/img_2.jpeg" class="image-popup">
-                <img src="img/img_2.jpeg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive">
+              <a href="img/delux_room.jpeg" class="image-popup">
+                <img src="img/delux_room.jpeg" alt="Free HTML5 Bootstrap Template by uicookies.com"
+                  class="img-responsive">
               </a>
-              <div class="actions">
+              <!-- <div class="actions">
                 <a href="https://vimeo.com/45830194" class="popup-vimeo"><i class="icon-play2"></i></a>
-              </div>
+              </div> -->
             </figure>
             <div class="text">
               <h3><a href="#">Deluxe Room</a></h3>
@@ -241,19 +256,20 @@
                 <li>24 hour running hot and cold water</li>
               </ul>
               <br><br>
-              <p><a href="#" class="btn btn-primary">Book now from ₹2000</a></p>
+              <p><a href="tel:+919816574040" class="btn btn-primary">Book now from ₹2000</a></p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="probootstrap-block-image-text">
             <figure>
-              <a href="img/img_2.jpeg" class="image-popup">
-                <img src="img/img_2.jpeg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive">
+              <a href="img/tent_house.jpg" class="image-popup">
+                <img src="img/tent_house.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com"
+                  class="img-responsive">
               </a>
-              <div class="actions">
+              <!-- <div class="actions">
                 <a href="https://vimeo.com/45830194" class="popup-vimeo"><i class="icon-play2"></i></a>
-              </div>
+              </div> -->
             </figure>
             <div class="text">
               <h3><a href="#">Tent House</a></h3>
@@ -271,7 +287,7 @@
                 <li>Riverside peaceful camping.</li>
               </ul>
               <br>
-              <p><a href="#" class="btn btn-primary">Book now from ₹1500</a></p>
+              <p><a href="tel:+919816574040" class="btn btn-primary">Book now from ₹1500</a></p>
             </div>
           </div>
         </div>
@@ -314,13 +330,6 @@
                     class="img-responsive"></a>
                 <div class="text">
                   <h3>Reception</h3>
-                  <!-- <p>Starting from <strong>$32.00/Night</strong></p> -->
-                  <!-- <div class="post-meta">
-                    <ul>
-                      <li><span class="review-rate">4.7</span> <i class="icon-star"></i> 252 Reviews</li>
-                      <li><i class="icon-user2"></i> 3 Guests</li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -329,14 +338,7 @@
                 <a href="#"><img src="img/img_3.jpeg" alt="Free Bootstrap Template by uicookies.com"
                     class="img-responsive"></a>
                 <div class="text">
-                  <h3>Bedroom - Grand Delux Room</h3>
-                  <!-- <p>Starting from <strong>$42.00/Night</strong></p>
-                  <div class="post-meta">
-                    <ul>
-                      <li><span class="review-rate">4.7</span> <i class="icon-star"></i> 252 Reviews</li>
-                      <li><i class="icon-user2"></i> 3 Guests</li>
-                    </ul>
-                  </div> -->
+                  <h3>Bedrooms</h3>
                 </div>
               </div>
             </div>
@@ -345,14 +347,7 @@
                 <a href="#"><img src="img/img_4.jpeg" alt="Free Bootstrap Template by uicookies.com"
                     class="img-responsive"></a>
                 <div class="text">
-                  <h3>Bedroom - Delux Room</h3>
-                  <!-- <p>Starting from <strong>$29.00/Night</strong></p> -->
-                  <!-- <div class="post-meta">
-                    <ul>
-                      <li><span class="review-rate">4.7</span> <i class="icon-star"></i> 252 Reviews</li>
-                      <li><i class="icon-user2"></i> 3 Guests</li>
-                    </ul>
-                  </div> -->
+                  <h3>Bathrooms</h3>
                 </div>
               </div>
             </div>
@@ -361,46 +356,7 @@
                 <a href="#"><img src="img/img_5.jpeg" alt="Free Bootstrap Template by uicookies.com"
                     class="img-responsive"></a>
                 <div class="text">
-                  <h3>Bathrooms</h3>
-                  <!-- <p>Starting from <strong>$32.00/Night</strong></p>
-                  <div class="post-meta">
-                    <ul>
-                      <li><span class="review-rate">4.7</span> <i class="icon-star"></i> 252 Reviews</li>
-                      <li><i class="icon-user2"></i> 3 Guests</li>
-                    </ul>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="probootstrap-room">
-                <a href="#"><img src="img/img_6.jpeg" alt="Free Bootstrap Template by uicookies.com"
-                    class="img-responsive"></a>
-                <div class="text">
-                  <h3>Riverside</h3>
-                  <!-- <p>Starting from <strong>$42.00/Night</strong></p>
-                  <div class="post-meta">
-                    <ul>
-                      <li><span class="review-rate">4.7</span> <i class="icon-star"></i> 252 Reviews</li>
-                      <li><i class="icon-user2"></i> 3 Guests</li>
-                    </ul>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="probootstrap-room">
-                <a href="#"><img src="img/img_7.jpeg" alt="Free Bootstrap Template by uicookies.com"
-                    class="img-responsive"></a>
-                <div class="text">
                   <h3>Outside</h3>
-                  <!-- <p>Starting from <strong>$42.00/Night</strong></p>
-                  <div class="post-meta">
-                    <ul>
-                      <li><span class="review-rate">4.7</span> <i class="icon-star"></i> 252 Reviews</li>
-                      <li><i class="icon-user2"></i> 3 Guests</li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -411,23 +367,21 @@
   </section>
 
   <section class="probootstrap-half">
-    <div class="image" style="background-image: url(img/slider_2.jpg);"></div>
+    <div class="image" id="nearbyplace" style="background-image: url(img/near_1.jpg);"></div>
     <div class="text">
       <div class="probootstrap-animate fadeInUp probootstrap-animated">
         <h2 class="mt0">Best 5 Places to visit</h2>
         <p><img src="img/curve_white.svg" class="seperator" alt="Free HTML5 Bootstrap Template"></p>
         <div class="row">
-          <div class="col-md-4">
-            <p>Rohtang Pass</p>
-            <p>Jogani Waterfall</p>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <p class="nearbyplace" onclick="changeImage(1)">Rohtang Pass</p>
+            <p class="nearbyplace" onclick="changeImage(2)">Jogani Waterfall</p>
+            <p class="nearbyplace" onclick="changeImage(3)">Mall Road Manali</p>
           </div>
-          <div class="col-md-4">
-            <p>Mall Road Manali</p>
-            <p>Hadimba Temple</p>
-          </div>
-          <div class="col-md-4">
-            <p>Hamata View</p>
-            <p>&amp; many others...</p>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <p class="nearbyplace" onclick="changeImage(4)">Hadimba Temple</p>
+            <p class="nearbyplace" onclick="changeImage(5)">Hamata View</p>
+            <p>Many others...</p>
           </div>
         </div>
         <!-- <p><a href="#" class="link-with-icon white">Learn More <i class=" icon-chevron-right"></i></a></p> -->
@@ -439,18 +393,22 @@
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="probootstrap-footer-widget">
             <p class="mt40"><img src="img/logo_sm.png" class="hires" width="120" height="33"
                 alt="Free HTML5 Bootstrap Template by uicookies.com"></p>
-            <p>Pushkar Regency the stay, Salam-Namaste. Our Resort is Nested in The Himalayan Ranges, Kissed by The Mighty River Beas, Overlooking the snow a clad mountain in all direction, We present a stay which will be remembered for ages to come. Carved out of original rocks and wooden interior theme with uniquely done furniture, real stones carved beds with giving you the real feel of the traditional houses of Manali with no compromises on your luxury.</p>
+            <p>Pushkar Regency the stay, Salam-Namaste. Our Resort is Nested in The Himalayan Ranges, Kissed by The
+              Mighty River Beas, Overlooking the snow a clad mountain in all direction, We present a stay which will be
+              remembered for ages to come. Carved out of original rocks and wooden interior theme with uniquely done
+              furniture, real stones carved beds with giving you the real feel of the traditional houses of Manali with
+              no compromises on your luxury.</p>
             <!-- <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p> -->
           </div>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="probootstrap-footer-widget">
             <h3>Blog</h3>
-            <!-- <ul class="probootstrap-blog-list">
+            <ul class="probootstrap-blog-list">
               <li>
                 <a href="#">
                   <figure class="probootstrap-image"><img src="img/img_1.jpg"
@@ -484,17 +442,18 @@
                   </div>
                 </a>
               </li>
-            </ul> -->
+            </ul>
           </div>
-        </div>
-        <div class="col-md-4">
+        </div> -->
+        <div class="col-md-6">
           <div class="probootstrap-footer-widget">
             <h3>Contact</h3>
             <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>Near Green Tax Barrier, Aaloo Ground, Manali, Himachal Pradesh - 175143</span></li>
-              <li><i class="icon-mail"></i><span>pushkarregency@gmail.com</span></li>
-              <li><i class="icon-phone2"></i><span>01902251555</span></li>
-              <li><i class="icon-phone2"></i><span>(+91) 9816574040</span></li>
+              <li><i class="icon-location2"></i> <span>Near Green Tax Barrier, Aaloo Ground, Manali, Himachal Pradesh -
+                  175143</span></li>
+              <li><i class="icon-mail"></i><span><a href="mailto:regency.pushkar@gmail.com">regency.pushkar@gmail.com</a></span></li>
+              <li><i class="icon-phone2"></i><span><a href="tel:01902251555">01902251555</a></span></li>
+              <li><i class="icon-phone2"></i><span><a href="tel:+919816574040">(+91) 9816574040</a></span></li>
             </ul>
           </div>
         </div>
@@ -533,25 +492,25 @@
       // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
       // firebase.firestore().doc('/foo/bar').get().then(() => { });
       // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-      firebase.messaging().requestPermission().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
       // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
       firebase.analytics(); // call to activate
       firebase.analytics().logEvent('user_landed');
-      // firebase.performance(); // call to activate
+      firebase.performance(); // call to activate
       //
       // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
       try {
         let app = firebase.app();
         let features = [
-          'auth',
-          'database',
-          'firestore',
-          'functions',
-          'messaging',
-          'storage',
+          // 'auth',
+          // 'database',
+          // 'firestore',
+          // 'functions',
+          // 'messaging',
+          // 'storage',
           'analytics',
-          'remoteConfig',
+          // 'remoteConfig',
           'performance',
         ].filter(feature => typeof app[feature] === 'function');
         loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
