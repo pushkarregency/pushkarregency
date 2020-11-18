@@ -5,14 +5,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+  <meta name="description" content="Pushkar Regency">
   <meta name="keywords"
-    content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    content="Manali, Manali road, snowfall, hotel, resort, restaurant, cafe, fun, motel, dining, Rohtang">
 
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:300,400,700|Rubik:300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/styles-merged.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="icon" type="image/png" href="img/favicon.png" />
 
   <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -41,7 +43,11 @@
 
   <script>
     function changeImage(value) {
-      document.getElementById("nearbyplace").style = "background-image: url(img/near_"+value+".jpg);";
+      document.getElementById("nearbyplace").style = "background-image: url(img/near_" + value + ".jpg);";
+    }
+
+    function scrollPageTo(value) {
+      document.getElementById(value).scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 
@@ -50,6 +56,7 @@
       text-decoration: underline;
       cursor: pointer;
     }
+
   </style>
 </head>
 
@@ -60,22 +67,22 @@
   <header role="banner" class="probootstrap-header">
     <!-- <div class="container"> -->
     <div class="row">
-      <a href="index.html" class="probootstrap-logo visible-xs"><img src="img/logo_sm.png" class="hires" width="120"
-          height="33" alt="Free Bootstrap Template by uicookies.com"></a>
+      <a class="probootstrap-logo visible-xs"><img src="img/logo_sm.png" class="hires" width="120" height="33"
+          alt="logo"></a>
 
       <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
       <div class="mobile-menu-overlay"></div>
 
       <nav role="navigation" class="probootstrap-nav hidden-xs">
         <ul class="probootstrap-main-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="rooms.html">Our Rooms</a></li>
-          <li class="hidden-xs probootstrap-logo-center"><a href="index.html"><img src="img/logo.png" class="hires"
-                width="181" height="50" alt="Free Bootstrap Template by uicookies.com"></a></li>
-          <li><a href="reservation.html">Reservation</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a onclick="scrollPageTo('top')">Home</a></li>
+          <li><a onclick="scrollPageTo('services')">Services</a></li>
+          <li><a onclick="scrollPageTo('rooms')">Our Rooms</a></li>
+          <li class="hidden-xs probootstrap-logo-center"><a><img src="img/logo.png" class="hires" width="181"
+                height="50" alt="logo"></a></li>
+          <li><a onclick="scrollPageTo('gallery')">Gallery</a></li>
+          <li><a onclick="scrollPageTo('nearby')">Near By</a></li>
+          <li><a onclick="scrollPageTo('contact')">Contact</a></li>
         </ul>
         <div class="extra-text visible-xs">
           <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -92,15 +99,15 @@
   </header>
   <!-- END: header -->
 
-  <section class="probootstrap-slider flexslider">
+  <section class="probootstrap-slider flexslider" id="top">
     <ul class="slides">
-      <li style="background-image: url(img/img_1.jpeg);" class="overlay">
+      <li style="background-image: url(img/slider_1.jpg);" class="overlay">
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
               <div class="probootstrap-slider-text text-center">
                 <p><img src="img/curve_white.svg" class="seperator probootstrap-animate"
-                    alt="Free HTML5 Bootstrap Template"></p>
+                    alt="curve"></p>
                 <h1 class="probootstrap-heading probootstrap-animate">Welcome to Pushkar Regency</h1>
                 <div class="probootstrap-animate probootstrap-sub-wrap">Reserve a room for your family and friends</div>
               </div>
@@ -108,13 +115,13 @@
           </div>
         </div>
       </li>
-      <li style="background-image: url(img/img_2.jpeg);" class="overlay">
+      <li style="background-image: url(img/slider_2.jpg);" class="overlay">
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
               <div class="probootstrap-slider-text text-center">
                 <p><img src="img/curve_white.svg" class="seperator probootstrap-animate"
-                    alt="Free HTML5 Bootstrap Template"></p>
+                    alt="curve"></p>
                 <h1 class="probootstrap-heading probootstrap-animate">Enjoy Luxury Experience</h1>
                 <div class="probootstrap-animate probootstrap-sub-wrap">Make your self-comfortable with luxurious
                   services.</div>
@@ -132,20 +139,21 @@
       <div class="row">
         <div class="col-md-12">
           <h2 class="probootstrap-cta-heading">Reserve a room for your family and friends</span></h2>
-          <div class="probootstrap-cta-button-wrap"><a href="tel:+919816574040" class="btn btn-primary">Call now</a></div>
+          <div class="probootstrap-cta-button-wrap"><a href="tel:+919816574040" class="btn btn-primary">Call now</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="probootstrap-section">
+  <section class="probootstrap-section" id="services">
     <div class="container">
       <div class="row mb30">
         <div class="col-md-8 col-md-offset-2 probootstrap-section-heading text-center">
           <h2>Explore our Services</h2>
           <p class="lead">We sincerely hope that all is well with you and your family. We offer luxury services,
             well-sanitized deluxe rooms, and amazing views for you in Manali.</p>
-          <p><img src="img/curve.svg" class="svg" alt="Free HTML5 Bootstrap Template"></p>
+          <p><img src="img/curve.svg" class="svg" alt="curve"></p>
         </div>
       </div>
       <div class="row">
@@ -153,7 +161,7 @@
           <div class="service left-icon probootstrap-animate">
             <div class="icon">
               <img src="img/flaticon/svg/001-building.svg" class="svg"
-                alt="Free HTML5 Bootstrap Template by uicookies.com">
+                alt="Room Icon">
             </div>
             <div class="text">
               <h3>Rooms</h3>
@@ -167,7 +175,7 @@
           <div class="service left-icon probootstrap-animate">
             <div class="icon">
               <img src="img/flaticon/svg/003-restaurant.svg" class="svg"
-                alt="Free HTML5 Bootstrap Template by uicookies.com">
+                alt="Restaurant Icon">
             </div>
             <div class="text">
               <h3>Food, Drinks, &amp; Music</h3>
@@ -179,7 +187,7 @@
           <div class="service left-icon probootstrap-animate">
             <div class="icon">
               <img src="img/flaticon/svg/004-parking.svg" class="svg"
-                alt="Free HTML5 Bootstrap Template by uicookies.com">
+                alt="Taxi Icon">
             </div>
             <div class="text">
               <h3>Airport Taxi</h3>
@@ -190,22 +198,22 @@
       </div>
     </div>
   </section>
-  <section class="probootstrap-section probootstrap-section-dark">
+
+  <section class="probootstrap-section probootstrap-section-dark" id="rooms">
     <div class="container">
       <div class="row mb30">
         <div class="col-md-8 col-md-offset-2 probootstrap-section-heading text-center">
           <h2>Room Types</h2>
           <!-- <p class="lead">We have a different type of suit for your requirements.</p> -->
-          <p><img src="img/curve.svg" class="svg" alt="Free HTML5 Bootstrap Template"></p>
+          <p><img src="img/curve.svg" class="svg" alt="curve"></p>
         </div>
       </div>
       <div class="row probootstrap-gutter10">
         <div class="col-md-4">
           <div class="probootstrap-block-image-text">
             <figure>
-              <a href="img/grand_delux_room.jpg" class="image-popup">
-                <img src="img/grand_delux_room.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com"
-                  class="img-responsive">
+              <a href="img/room_1.jpg" class="image-popup">
+                <img src="img/room_1.jpg" alt="Grand Deluxe Room" class="img-responsive">
               </a>
               <!-- <div class="actions">
                 <a href="https://vimeo.com/45830194" class="popup-vimeo"><i class="icon-play2"></i></a>
@@ -233,9 +241,8 @@
         <div class="col-md-4">
           <div class="probootstrap-block-image-text">
             <figure>
-              <a href="img/delux_room.jpeg" class="image-popup">
-                <img src="img/delux_room.jpeg" alt="Free HTML5 Bootstrap Template by uicookies.com"
-                  class="img-responsive">
+              <a href="img/room_2.jpg" class="image-popup">
+                <img src="img/room_2.jpg" alt="Deluxe Room" class="img-responsive">
               </a>
               <!-- <div class="actions">
                 <a href="https://vimeo.com/45830194" class="popup-vimeo"><i class="icon-play2"></i></a>
@@ -263,9 +270,8 @@
         <div class="col-md-4">
           <div class="probootstrap-block-image-text">
             <figure>
-              <a href="img/tent_house.jpg" class="image-popup">
-                <img src="img/tent_house.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com"
-                  class="img-responsive">
+              <a href="img/room_3.jpg" class="image-popup">
+                <img src="img/room_3.jpg" alt="Tent House" class="img-responsive">
               </a>
               <!-- <div class="actions">
                 <a href="https://vimeo.com/45830194" class="popup-vimeo"><i class="icon-play2"></i></a>
@@ -294,7 +300,8 @@
       </div>
     </div>
   </section>
-  <section class="probootstrap-section">
+
+  <section class="probootstrap-section" id="gallery">
     <div class="container">
       <div class="row">
         <div class="col-md-12 probootstrap-relative">
@@ -310,7 +317,7 @@
           <div class="owl-carousel owl-carousel-carousel">
             <div class="item">
               <div class="probootstrap-room">
-                <a href="#"><img src="img/img_1.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                <a href="#"><img src="img/img_1.jpeg" alt="Restaurant"
                     class="img-responsive"></a>
                 <div class="text">
                   <h3>Restaurant</h3>
@@ -326,7 +333,7 @@
             </div>
             <div class="item">
               <div class="probootstrap-room">
-                <a href="#"><img src="img/img_2.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                <a href="#"><img src="img/img_2.jpeg" alt="Reception"
                     class="img-responsive"></a>
                 <div class="text">
                   <h3>Reception</h3>
@@ -335,7 +342,7 @@
             </div>
             <div class="item">
               <div class="probootstrap-room">
-                <a href="#"><img src="img/img_3.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                <a href="#"><img src="img/img_3.jpeg" alt="Bedrooms"
                     class="img-responsive"></a>
                 <div class="text">
                   <h3>Bedrooms</h3>
@@ -344,7 +351,7 @@
             </div>
             <div class="item">
               <div class="probootstrap-room">
-                <a href="#"><img src="img/img_4.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                <a href="#"><img src="img/img_4.jpeg" alt="Bathrooms"
                     class="img-responsive"></a>
                 <div class="text">
                   <h3>Bathrooms</h3>
@@ -353,10 +360,55 @@
             </div>
             <div class="item">
               <div class="probootstrap-room">
-                <a href="#"><img src="img/img_5.jpeg" alt="Free Bootstrap Template by uicookies.com"
+                <a href="#"><img src="img/img_5.jpeg" alt="Outside View"
                     class="img-responsive"></a>
                 <div class="text">
                   <h3>Outside</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="probootstrap-room">
+                <a href="#"><img src="img/img_6.jpeg" alt="Riverside View"
+                    class="img-responsive"></a>
+                <div class="text">
+                  <h3>Riverside</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="probootstrap-room">
+                <a href="#"><img src="img/img_7.jpeg" alt="Dining 1"
+                    class="img-responsive"></a>
+                <div class="text">
+                  <h3>Dining - 1</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="probootstrap-room">
+                <a href="#"><img src="img/img_8.jpeg" alt="Dining 2"
+                    class="img-responsive"></a>
+                <div class="text">
+                  <h3>Dining - 2</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="probootstrap-room">
+                <a href="#"><img src="img/img_9.jpeg" alt="Inside 1"
+                    class="img-responsive"></a>
+                <div class="text">
+                  <h3>Inside - 1</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="probootstrap-room">
+                <a href="#"><img src="img/img_10.jpeg" alt="Inside 2"
+                    class="img-responsive"></a>
+                <div class="text">
+                  <h3>Inside - 2</h3>
                 </div>
               </div>
             </div>
@@ -366,12 +418,12 @@
     </div>
   </section>
 
-  <section class="probootstrap-half">
+  <section class="probootstrap-half" id="nearby">
     <div class="image" id="nearbyplace" style="background-image: url(img/near_1.jpg);"></div>
     <div class="text">
       <div class="probootstrap-animate fadeInUp probootstrap-animated">
-        <h2 class="mt0">Best 5 Places to visit</h2>
-        <p><img src="img/curve_white.svg" class="seperator" alt="Free HTML5 Bootstrap Template"></p>
+        <h2 class="mt0">Best 5 places to visit</h2>
+        <p><img src="img/curve_white.svg" class="seperator" alt="curve"></p>
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <p class="nearbyplace" onclick="changeImage(1)">Rohtang Pass</p>
@@ -390,13 +442,13 @@
   </section>
 
   <!-- START: footer -->
-  <footer role="contentinfo" class="probootstrap-footer">
+  <footer role="contentinfo" class="probootstrap-footer" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="probootstrap-footer-widget">
             <p class="mt40"><img src="img/logo_sm.png" class="hires" width="120" height="33"
-                alt="Free HTML5 Bootstrap Template by uicookies.com"></p>
+                alt="logo"></p>
             <p>Pushkar Regency the stay, Salam-Namaste. Our Resort is Nested in The Himalayan Ranges, Kissed by The
               Mighty River Beas, Overlooking the snow a clad mountain in all direction, We present a stay which will be
               remembered for ages to come. Carved out of original rocks and wooden interior theme with uniquely done
@@ -412,7 +464,7 @@
               <li>
                 <a href="#">
                   <figure class="probootstrap-image"><img src="img/img_1.jpg"
-                      alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                      alt="logo" class="img-responsive"></figure>
                   <div class="probootstrap-text">
                     <h4>River named Duden flows</h4>
                     <span class="meta">August 2, 2017</span>
@@ -423,7 +475,7 @@
               <li>
                 <a href="#">
                   <figure class="probootstrap-image"><img src="img/img_2.jpg"
-                      alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                      alt="logo" class="img-responsive"></figure>
                   <div class="probootstrap-text">
                     <h4>River named Duden flows</h4>
                     <span class="meta">August 2, 2017</span>
@@ -434,7 +486,7 @@
               <li>
                 <a href="#">
                   <figure class="probootstrap-image"><img src="img/img_3.jpg"
-                      alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+                      alt="logo" class="img-responsive"></figure>
                   <div class="probootstrap-text">
                     <h4>River named Duden flows</h4>
                     <span class="meta">August 2, 2017</span>
@@ -451,7 +503,8 @@
             <ul class="probootstrap-contact-info">
               <li><i class="icon-location2"></i> <span>Near Green Tax Barrier, Aaloo Ground, Manali, Himachal Pradesh -
                   175143</span></li>
-              <li><i class="icon-mail"></i><span><a href="mailto:regency.pushkar@gmail.com">regency.pushkar@gmail.com</a></span></li>
+              <li><i class="icon-mail"></i><span><a
+                    href="mailto:regency.pushkar@gmail.com">regency.pushkar@gmail.com</a></span></li>
               <li><i class="icon-phone2"></i><span><a href="tel:01902251555">01902251555</a></span></li>
               <li><i class="icon-phone2"></i><span><a href="tel:+919816574040">(+91) 9816574040</a></span></li>
             </ul>
@@ -469,7 +522,7 @@
           <p>
             <small>&copy; 2020 <a href="#" target="_blank">Pushkar Regency</a>. All Rights
               Reserved. <br> Designed &amp; Developed by <a href="https://uicookies.com/"
-                target="_blank">uicookies.com</a> Demo Images: Unsplash.com &amp; Pexels.com</small>
+                target="_blank">uicookies.com</a></small>
           </p>
 
         </div>
